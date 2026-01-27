@@ -1,0 +1,221 @@
+/* Simple Slider Styles */
+.simple-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-top: var(--spacing-lg);
+}
+
+.simple-slider-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.simple-slider-slide {
+    flex: 0 0 20%; /* 5 slides visible on desktop */
+    padding-right: 8px;
+    box-sizing: border-box;
+}
+
+.simple-slider-slide .slider_item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.simple-slider-slide .slider_item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.simple-slider-slide .link_pic {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.simple-slider-slide .link_pic img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.simple-slider-slide .link_pic:hover img {
+    transform: scale(1.1);
+}
+
+.simple-slider-slide .btn {
+    font-size: var(--font-size-xl);
+    height: auto;
+    border-radius: 6px;
+}
+
+/* Navigation dots */
+.simple-slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+    padding-bottom: 10px; /* Additional space for enlarged dots */
+}
+
+.simple-slider-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--color-accent-2);
+    opacity: 0.5;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    padding: 0;
+}
+
+.simple-slider-dot.active,
+.simple-slider-dot:hover {
+    background: var(--color-accent-2);
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/* Arrow navigation */
+.simple-slider-nav {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.simple-slider-nav:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.simple-slider-prev {
+    left: 20px;
+}
+
+.simple-slider-next {
+    right: 20px;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1440px) {
+    .simple-slider-slide {
+        flex: 0 0 25%; /* 4 slides */
+    }
+}
+
+@media (max-width: 1024px) {
+    .simple-slider-slide {
+        flex: 0 0 33.333%; /* 3 slides */
+    }
+}
+
+@media (max-width: 768px) {
+    .simple-slider-slide {
+        flex: 0 0 50%; /* 2 slides */
+    }
+
+    .simple-slider-nav {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .simple-slider-slide {
+        flex: 0 0 100%; /* 1 slide */
+        padding: 0 4px;
+    }
+
+    .simple-slider-nav {
+        display: none; /* Hide arrows on mobile */
+    }
+}
+
+/* Auto-scroll indicator */
+.simple-slider-progress {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    height: 2px;
+    background: #1fd1f9;
+    transition: width 0.1s linear;
+    border-radius: 1px;
+}
+
+/* Pause on hover */
+.simple-slider:hover .simple-slider-progress {
+    animation-play-state: paused;
+}
+
+/* Smooth animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.simple-slider-slide {
+    animation: slideIn 0.5s ease-out;
+}
+@media (max-width: 1440px) {
+    .popular_slider .slider_item {
+        width: calc(25% - var(--spacing-lg));
+    }}
+/* Blog slider: force 3 slides on desktop */
+@media (min-width: 1025px) {
+    .slider_blog .simple-slider-slide {
+        flex: 0 0 33.333%;
+    } 
+    .popular_slider .slider_item {
+        width: calc(33.333% - var(--spacing-lg));
+    }
+}
+
+.slider_item .btn,
+.div_bonus .btn,
+.div_pic .btn {
+    margin-top: 12px;
+    border-radius: var(--radius-sm);
+    padding: var(--spacing-xs) 0;
+    font-size: var(--font-size-md);
+    line-height: var(--line-height-md);
+}
+
+ @media (max-width: 769px) {
+    .popular_slider .slider_item {
+        width: calc(50% - var(--spacing-lg));
+    }
+}
+
+@media (max-width: 480px) {
+    .popular_slider .slider_item {
+        width: calc(100% - var(--spacing-lg));
+    }
+
+}
+

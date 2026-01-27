@@ -1,0 +1,207 @@
+
+.header {
+    background: var(--color-bg-header-footer);
+    color: var(--color-white);
+    position: fixed;
+    z-index: var(--z-header);
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.header .container {
+    padding: 0 var(--container-padding-mobile);
+}
+
+.header_top {
+    height: var(--header-height-desktop);
+}
+
+.logo {
+    max-width: 160px;
+    height: auto;
+}
+
+/* ======================================================================
+   NAVIGATION
+   ====================================================================== */
+
+.nav {
+    z-index: var(--z-nav);
+    padding:0 30px;
+    width: 85%;
+}
+
+.nav ul li {
+    padding: 0 0 0 var(--spacing-lg);
+    position: relative;
+}
+
+.nav ul li:first-child {
+    padding: 0;
+}
+
+.nav ul li a {
+    position: relative;
+    display: block;
+    /*color: var(--color-nav-menu-text);*/
+    font: 700 var(--font-size-sm)/var(--line-height-xs) 'Font-Base', Arial, Helvetica, sans-serif;
+    transition: var(--transition-fast);
+    white-space: nowrap;
+    opacity: 0.6;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.nav ul.flex {
+    row-gap: var(--spacing-sm);
+    column-gap: var(--spacing-lg);
+    width: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
+.nav ul.flex li {
+    padding: 0;
+}
+
+.nav ul li.active a,
+.nav ul li:hover a {
+    opacity: 1;
+}
+
+/* Mobile navigation toggle */
+.nav_open {
+    cursor: pointer;
+    transition: var(--transition-normal);
+    z-index: var(--z-header);
+    text-transform: uppercase;
+    display: none;
+    border: none;
+    background: none;
+}
+
+.nav_open span {
+    background: var(--color-accent-2);
+    height: 2px;
+    width: 16px;
+    margin-top: 3px;
+    display: block;
+    transition: var(--transition-fast);
+}
+
+.nav_open span:first-child {
+    margin-top: 0;
+}
+
+.nav_open.active span {
+    transform: rotate(45deg);
+    margin-top: 0;
+}
+
+.nav_open.active span + span {
+    transform: rotate(0deg);
+    margin-top: 0;
+    visibility: hidden;
+}
+
+.nav_open.active span + span + span {
+    transform: rotate(-45deg);
+    margin-top: -4px;
+    visibility: visible;
+}
+
+@media (max-width: 1440px) {
+  
+    .nav_open {
+        display: block;
+    }
+
+    .nav {
+        position: fixed;
+        top: var(--header-height-desktop);
+        left: 0;
+        right: 0;
+        height: calc(100vh - var(--header-height-desktop));
+        background: var(--color-dark-2);
+        transform: rotateY(-90deg);
+        transition: var(--transition-fast);
+        transform-origin: left;
+    }
+
+    .nav ul {
+        display: block;
+        padding: var(--spacing-2xl) var(--container-padding-mobile) 0;
+    }
+
+    .nav ul li {
+        padding: 0;
+    }
+
+    .nav ul li a {
+        font: 700 var(--font-size-md) / var(--line-height-xl) 'Font-Base', Arial, Helvetica, sans-serif;
+    }
+
+    .nav.active {
+        transform: rotateY(0deg);
+    }
+
+    .header .logo {
+        margin-right: auto;
+        margin-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+
+  .header .btn {
+        padding: 5px 10px;
+        font: 700 var(--font-size-sm)/var(--line-height-relative) Font-Secondary, Arial, Helvetica, sans-serif
+    }
+    .header_top {
+        height: var(--header-height-mobile);
+    }
+
+    .nav_open {
+        display: block;
+    }
+
+    .nav {
+        position: fixed;
+        top: var(--header-height-mobile);
+        left: 0;
+        right: 0;
+        height: calc(100vh - var(--header-height-mobile));
+        background: var(--color-dark-2);
+        transform: rotateY(-90deg);
+        transition: var(--transition-fast);
+        transform-origin: left;
+    }
+
+    .nav ul {
+        display: block;
+        padding: var(--spacing-2xl) var(--container-padding-mobile) 0;
+    }
+
+    .nav ul li {
+        padding: 0;
+    }
+
+    .logo {
+        width: auto;
+    }
+
+    .logo img {
+        width: 100%;
+        height: auto;
+    }
+
+    .nav ul li a {
+        font: 700 var(--font-size-md) / var(--line-height-xl) 'Font-Base', Arial, Helvetica, sans-serif;
+    }
+
+    .nav.active {
+        transform: rotateY(0deg);
+    }}
