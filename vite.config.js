@@ -5,6 +5,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   assetsInclude: ['**/*.avif', '**/*.webp'],
+   base: '/bird-casino/',
   
   // Добавьте явную обработку avif
   build: {
@@ -16,3 +17,4 @@ export default defineConfig({
     include: ['**/*.avif']
   }
 });
+ 
