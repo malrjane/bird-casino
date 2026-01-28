@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import './Header.css';
-import logoImage from '../../assets/images/logo.png'
+import logoImage from '/images/logo.png'
+import Button from '../Button/Button';
 
 function Header() {
 
@@ -82,7 +83,7 @@ const toggleNav = () => {
                             <li><a href="/blog">Blog</a></li>
                         </ul>
                     </nav>
-                    <a href="/start" className="btn btn_1">Register</a>
+                    {<Button btnText={'Register'}/>}
                 </div>
             </div>
         </header>

@@ -1,0 +1,349 @@
+{
+  "title": "BirdSpin Casino Review of Bonuses Games and Payments",
+  "keywords": "BirdSpin casino review, BirdSpin welcome bonus, BirdSpin promotions, BirdSpin payment methods",
+  "description": "Read our BirdSpin casino review covering the 100 percent welcome bonus, 15000 games, fast payouts, responsible tools, and loyalty perks for real players",
+  "blocks": [
+    {
+      "blockType": "hero",
+      "elements": [
+        { "type": "span", "text": "First Deposit Bonus" },
+        { "type": "h6", "text": "100% up to 555 EUR with 200 free spins and 3 coins" },
+        { "type": "button", "text": "Get Bonus" },
+        { "type": "image", "src": "heroImage" }
+      ]
+    },
+    {
+      "blockType": "section",
+      "id": "aboutProject",
+      "elements": [
+        { "type": "h1", "text": "BirdSpin Casino Player Reviews Hub" },
+        { "type": "p", "text": "Players at BirdSpin Casino share upbeat stories about unlocking the 100 percent welcome boost, spinning through 15000 slots, and enjoying daily tournaments. This BirdSpin casino review lounge highlights verified opinions about fast payouts, friendly support, and the 7 percent VIP cashback. Discover how BirdSpin keeps the vibe heroic while staying fair and secure" },
+        {
+          "type": "component",
+          "source": "slot-slider",
+          "data": [
+            { "id": 1, "name": "Starburst", "image": "i1" },
+            { "id": 2, "name": "Sweet Bonanza", "image": "i2" },
+            { "id": 3, "name": "Gates of Olympus", "image": "i3" },
+            { "id": 4, "name": "Starlight Princess", "image": "i4" },
+            { "id": 5, "name": "Sugar Rush", "image": "i5" },
+            { "id": 6, "name": "Madame Destiny", "image": "i6" },
+            { "id": 7, "name": "Big Bass Splash", "image": "i7" },
+            { "id": 8, "name": "Razor Shark", "image": "i8" },
+            { "id": 9, "name": "Money Train 3", "image": "i9" }
+          ]
+        }
+      ]
+    },
+    {
+      "blockType": "sectionText",
+      "id": "bonuses",
+      "elements": [
+        { "type": "h2", "text": "BirdSpin Bonuses Ready To Launch " },
+        { "type": "p", "text": "BirdSpin Casino lines up a huge welcome package that climbs to 400 percent worth 2000 EUR plus 230 free spins across the first four deposits. The opening match is 100 percent up to 555 EUR with 200 free spins and 3 loyalty coins, followed by 70 percent, 60 percent, and 70 percent reloads stacked with spins and coins." }
+      ]
+    },
+    {
+      "blockType": "sectionText",
+      "id": "loyaltyProgram",
+      "elements": [
+        { "type": "h2", "text": "BirdSpin Loyalty Levels Take Flight" },
+        { "type": "p", "text": "The BirdSpin loyalty program features a five-stage path with 100 levels that reward XP fans for every 10 EUR bet on qualifying slots." }
+      ]
+    },
+    {
+      "blockType": "gridCards",
+      "id": "paymentDetails",
+      "isCol": true,
+      "elements": [
+        { "type": "h2", "text": "BirdSpin Withdrawal Speed Insights Guide" },
+        { "type": "p", "text": "Cashouts at BirdSpin Casino usually approve within one business day after the initial KYC check, while cards and bank transfers complete in up to three days. Crypto and e-wallet requests often arrive within minutes thanks to the fast cashier workflow. Real-time status updates in the Cashier tab display limits, timestamps, and tracking IDs so you always know when the next win lands" },
+        { "type": "h2", "text": "BirdSpin Payment Methods Lineup Overview" },
+        { "type": "p", "text": "BirdSpin Casino supports trusted cards like Visa and Mastercard alongside Skrill, Neteller, Paysafecard, Jeton, and major crypto rails for deposits and withdrawals. Every option runs through 256-bit SSL and respects EU AML rules. E-wallet and crypto cashouts travel fastest, while cards and bank wires follow within three days. Track channel limits and status updates inside the Cashier area for stress-free banking" },
+         { "type": "h2", "text": "BirdSpin Cashout Limits Overview" },
+        { "type": "p", "text": "BirdSpin daily withdrawal limit is 500 EUR while monthly cap sits at 15000 EUR, with higher ceilings possible for top VIPs. The cashier processes one pending request per payment method, so plan large wins in instalments. Keep wagering the initial deposit at least three times to unlock payouts, and expect the team to verify matched details before releasing funds" },
+        { "type": "h2", "text": "BirdSpin Cashier Support Coverage Guide" },
+        { "type": "p", "text": "Whenever a cashout stalls, BirdSpin Casino support stays available 24 seven through live chat and email with clear timelines and compliance checklists. Agents guide you through document uploads, explain why a withdrawal might queue, and send updates once finance approves the ticket. VIP hosts provide priority routing for higher tiers, ensuring even large withdrawals stay on schedule" }
+      ]
+    },
+    {
+      "blockType": "cta",
+      "elements": [
+        { "type": "span", "text": "First Deposit Bonus" },
+        { "type": "h6", "text": "100% up to 555 EUR with 200 free spins and 3 coins" },
+        { "type": "button", "text": "Get Bonus" },
+        { "type": "image", "src": "cta1" }
+      ]
+    },
+    {
+      "blockType": "text3col",
+      "id": "depositMethods",
+      "elements": [
+        { "type": "h2", "text": "BirdSpin Deposit Options Ready Today" },
+        { "type": "p", "text": "BirdSpin Casino accepts instant deposits via Visa, Mastercard, Skrill, Neteller, and crypto." },
+        {
+          "type": "component",
+          "source": "bonus-cards",
+          "data": [
+            { "id": 1, "name": "Welcome Bonus", "conditions": "400% package", "src": "bonus1" },
+            { "id": 2, "name": "First Deposit Bonus", "conditions": "100% bonus", "src": "bonus2" },
+            { "id": 3, "name": "Free Spins", "conditions": "Daily drops", "src": "bonus3" }
+          ]
+        }
+      ]
+    },
+    {
+      "blockType": "imgText",
+      "id": "freeSpins",
+      "isCol": true,
+      "elements": [
+        { "type": "h2", "text": "BirdSpin Free Spins Parade Guide" },
+        { "type": "p", "text": "BirdSpin Casino showers players with free spins through the 200-spin first deposit bonus, 100-spin reloads, daily Free Spins Drops worth 1350 spins, and a weekly tournament sharing 3500 spins. Loyalty levels add extra spin bundles, while seasonal promo codes pop up in the Bonus Map. Track wagering terms beside every offer so freebies convert smoothly" },
+        { "type": "image", "src": "right-img" }
+      ]
+    },
+     {
+      "blockType": "gridCards2",
+      "id": "safetyEase",
+      "isCol": true,
+      "elements": [
+        { "type": "h2", "text": "BirdSpin Safety and Fair Play Shield" },
+        { "type": "p", "text": "BirdSpin Casino is operated by Fionex Holding LTD under Anjouan License ALSI-202409044-FI2 and secures every transaction with 256-bit SSL. Responsible gaming tools like reality checks, cooling-off breaks, and self-exclusion live in your profile, while two-factor authentication protects logins. Independent providers supply certified RNG titles, keeping the superhero playground safe for real bankrolls" },
+        { "type": "h2", "text": "BirdSpin Mobile Casino Ready Anywhere" },
+        { "type": "p", "text": "BirdSpin Casino runs smoothly on iOS, Android, and tablets thanks to a lightweight HTML5 lobby that launches 15000 slots, crash games, and live dealer tables without downloads. A data saver keeps reels in sync on 4G, while cashier tools mirror desktop limits. Touch-friendly menus also drive you toward bonus missions and tournaments on the go" },
+         { "type": "h2", "text": "BirdSpin Live Chat Heroes Online" },
+        { "type": "p", "text": "The BirdSpin live chat widget rides shotgun on every page, connecting you to trained agents in seconds no matter the device. Expect friendly guidance on bonuses, tournaments, payments, and verification, plus follow-up emails when a case needs more detail. Chat logs remain stored in your account inbox so you can revisit resolutions anytime" },
+         { "type": "h2", "text": "BirdSpin Licensing Confidence Overview Today" },
+        { "type": "p", "text": "BirdSpin Casino operates under the Government of the Autonomous Island of Anjouan with license ALSI-202409044-FI2, issued to Fionex Holding LTD. The license obliges the team to comply with AML checks, segregated funds policies, and responsible play standards monitored by the regulator. Payment processing runs through Heighten Services LTD in Cyprus, adding EU oversight. Verification links sit in the footer for transparency" }
+      ]
+    },
+     {
+      "blockType": "imgText",
+      "id": "popularGames",
+      "isCol": true,
+      "direction": "reverse",
+      "elements": [
+          { "type": "image", "src": "left-img" },
+        { "type": "h2", "text": "Popular BirdSpin Games Worth a Spin" },
+        { "type": "p", "text": "BirdSpin Casino spotlights Bgaming hits like Johnny Cash, Lady Wolf Moon, Plinko 2, and Gemhalla in its Hot Games carousel, while Popular tabs stack Sweet Rush Megaways, Snoop Dogg Dollars, and Bonanza Billion. Every title launches in demo mode, letting you test volatility before betting real funds. Fresh releases appear weekly to keep the lobby buzzing " }
+       
+      ]
+    },
+   {
+      "blockType": "providers",
+      "id": "gameProviders",
+      "elements": [
+          
+        { "type": "h2", "text": "BirdSpin Software Providers Lineup Showcase" },
+        { "type": "p", "text": "Industry powerhouses like Pragmatic Play, NetEnt, Microgaming, Evolution, Play n GO, and Bgaming headline the BirdSpin Casino catalogue, joined by innovative studios such as Spinomenal, NoLimit City, and Hacksaw Gaming. Filters let you browse by provider, volatility, or feature, while Drops and Wins badges highlight boosted prize pools. Every partner holds independent certifications for fairness" },
+        { "type": "component",  "source": "providers-logos",
+          "data": [
+ { "id": 1, "src": "provider1"  },
+        { "id": 2, "src": "provider2"  },
+        { "id": 3, "src": "provider3" },
+        { "id": 4, "src": "provider4"  },
+        { "id": 5, "src": "provider5" },
+        { "id": 6, "src": "provider6"  },
+        { "id": 7, "src": "provider7" },
+        { "id": 8, "src": "provider8"  },
+        { "id": 9, "src": "provider9"  },
+        { "id": 10, "src": "provider10" },
+        { "id": 11, "src": "provider11" },
+        { "id": 12, "src": "provider12" },
+        { "id": 13, "src": "provider13"  },
+        { "id": 14, "src": "provider14" },
+        { "id": 15, "src": "provider15"  },
+        { "id": 16, "src": "provider16" },
+        { "id": 17, "src": "provider17"  },
+        { "id": 18, "src": "provider18"  },
+        { "id": 19, "src": "provider19" },
+        { "id": 20, "src": "provider20" },
+        { "id": 21, "src": "provider21" },
+        { "id": 22, "src": "provider22"  }
+      
+          ] }
+       
+      ]
+    },
+     {
+      "blockType": "imgTextBtn",
+      "id": "popularGames",
+      "isCol": true,
+      "direction": "reverse",
+      "hasBtn": true,
+      "elements": [
+          { "type": "image", "src": "left-img" },
+        { "type": "h2", "text": "BirdSpin VIP Program Elevation Guide" },
+        { "type": "p", "text": "Reaching the BirdSpin VIP program feels like levelling a superhero. One hundred tiers grouped into five chapters deliver free spins, coin bundles, cashback increases, and personalised gifts. High Roller deposits unlock dedicated hosts, faster withdrawals, and exclusive tournaments. Progress bars update with every spin, so you always see how close the next milestone reward sits" },
+        {
+          "type": "component",
+          "source": "bonus-btn",
+          "btnText": "Get Bonus"
+          
+        }
+       
+      ]
+    },
+ 
+
+    {
+      "blockType": "faq",
+      "id": "sectionFaq",
+       "elements": [
+{ "type": "h2", "text": "BirdSpin FAQ Quick Answers Hub" },
+        { "type": "p", "text": "The BirdSpin FAQ addresses the essentials: how to claim the no deposit gifts, where to find wagering requirements, supported payment methods, withdrawal speeds, and mobile compatibility. Each answer summarises the rules and links you to full terms inside the account area. Start here before chatting with support to solve common questions faster" },
+        {
+          "type": "component",
+          "source": "faq",
+          "data": [
+            { "id": 1, "question": "How do I unlock the BirdSpin welcome bonus?", "answer" : "Register, verify your email, and deposit at least 20 EUR to trigger the first 100 percent match up to 555 EUR plus 200 free spins and 3 coins. Follow the on-screen missions to claim the second, third, and fourth reloads for the full 400 percent package"},
+            { "id": 2, "question": "Where can I find BirdSpin wagering requirements?", "answer": "Every promotion tile lists the wagering requirement next to the claim button, and the bonus terms explain that most slots contribute 100 percent, table games 10 percent, and blackjack or roulette 5 percent. Check the progress bar in your profile before requesting a withdrawal" },
+            { "id": 3, "question": "Where can I find BirdSpin wagering requirements?", "answer": "You can withdraw through Visa, Mastercard, Skrill, Neteller, Paysafecard balance returns, Jeton, bank transfers, and popular crypto wallets, provided the method matches your latest deposit. Each channel shows its limits and expected timing inside the Cashier section, keeping banking predictable" },
+            { "id": 4, "question": "How fast does BirdSpin process withdrawals?", "answer": "After your KYC check, BirdSpin processes e-wallet and crypto payouts within minutes and completes card or bank transfers within one to three banking days. Stay logged into the Cashier tab to track timestamps, status changes, and any extra document requests" },
+            { "id": 5, "question": "Can I play BirdSpin games on mobile?", "answer": "Yes, the responsive BirdSpin lobby streams 15000 slots, crash games, and Evolution live tables directly in your browser on iOS, Android, and tablets. Touch controls adjust automatically, and every bonus, payment method, and tournament mission remains available on the small screen" }
+          ]
+        }
+       ]
+  
+  
+},
+
+ {
+      "blockType": "bonusOverview",
+      "id": "sectionSummary",
+       
+      "elements": [
+         { "type": "h2", "text": "BirdSpin Casino Snapshot Overview Today" },
+         { "type": "strong", "text": "Casino Name" },
+        { "type": "span", "text": "Birdspin Casino" },
+        { "type": "strong", "text": "Website" },
+        { "type": "span", "text": "birdspin.com" },
+        { "type": "strong", "text": "Launched" },
+                { "type": "span", "text": "2025" },
+
+        { "type": "strong", "text": "Type" },
+                { "type": "span", "text": "Real money online casino focused on slots and live games" },
+
+        { "type": "strong", "text": "VIP Bonus" },
+                { "type": "span", "text": "7% daily VIP cashback with bonus coins ladder" },
+
+        { "type": "strong", "text": "Bonus Crab" },
+                { "type": "span", "text": "Yes" },
+
+        { "type": "strong", "text": "Welcome Bonus" },
+                { "type": "span", "text": "400% welcome package up to 2000 EUR plus 230 free spins" },
+
+        { "type": "strong", "text": "First Deposit Bonus" },
+                { "type": "span", "text": "100% up to 555 EUR with 200 free spins and 3 coins" },
+
+        { "type": "strong", "text": "Free Spins" },
+                { "type": "span", "text": "Daily 1350 free spins drops and weekly 3500 free spins race" }
+       
+      ]
+    },
+    {
+  "blockType": "prosCons",
+  "id": "sectionProps",
+  "elements": [
+    { "type": "h2", "text": "BirdSpin Pros and Cons Balance" },
+    {
+      "type": "component",
+      "source": "pros-cons-grid",
+      "data": {
+        "pros": {
+          "title": "What Makes BirdSpin Shine Today",
+          "items": [
+            "Massive 400 percent welcome staircase with stacked free spins",
+            "Over 15000 certified slots plus Evolution live casino tables",
+            "70 plus payment methods including crypto and fast e-wallets",
+            "Daily tournaments loyalty missions and 7 percent VIP cashback"
+          ]
+        },
+        "cons": {
+          "title": "Where BirdSpin Can Improve",
+          "items": [
+            "Daily withdrawal limit 500 EUR for standard accounts",
+            "Some promotions restricted for certain countries and payment methods",
+            "Live chat currently available only in English language",
+            "High wagering contributions on table games slow bonus clearing"
+          ]
+        }
+      }
+    }
+  ]
+},
+{
+  "blockType": "articles",
+  "id": "sectionBlog",
+  "elements": [
+    { "type": "h2", "text": "Latest Guides from BirdSpin Blog" },
+     { "type": "btn", "text": "Explore More", "link": "/blog" },
+      { "type": "btnBig", "text": "See all articles" },
+     
+    {
+      "type": "component",
+      "source": "blog-grid",
+      "data": [
+        {
+          "id": 1,
+          "link": "blog/seasonal-promotions-december-2025",
+          "image": "blog_img_6",
+          "alt": "Seasonal Promotions and Tournaments at BirdSpin Casino 2025",
+          "date": "December 11, 2025",
+          "title": "Seasonal Promotions and Tournaments at BirdSpin Casino 2025 – December Update",
+          "excerpt": "December 11, 2025 – over €200,000 in tournament prize pools, daily free spin drops and exclusive seasonal promotions are running right now at BirdSpin Casino."
+        },
+        {
+          "id": 2,
+          "link": "blog/live-dealer-games",
+          "image": "blog_img_5",
+          "alt": "Top 10 Slot Games to Try at BirdSpin Casino in 2025",
+          "date": "December 03, 2025",
+          "title": "Exploring Live Dealer Games at BirdSpin Casino 2025 – Full Overview",
+          "excerpt": "Feel the real casino atmosphere from home: Evolution Gaming and Pragmatic Play Live power BirdSpin’s live dealer lobby with blackjack, roulette, and game shows."
+        },
+        {
+          "id": 3,
+          "link": "blog/fast-withdrawals-guide",
+          "image": "blog_img_4",
+          "alt": "A Guide to Fast Withdrawals and Payments at BirdSpin Casino 2025",
+          "date": "November 25, 2025",
+          "title": "A Guide to Fast Withdrawals and Payments at BirdSpin Casino 2025",
+          "excerpt": "BirdSpin Casino runs one of the most generous loyalty systems in 2025 – 100 levels, up to 7% daily cashback, and personal hosts."
+        },
+        {
+          "id": 4,
+          "link": "blog/vip-program-guide",
+          "image": "blog_img_3",
+          "alt": "BirdSpin Casino VIP Program 2025",
+          "date": "November 18, 2025",
+          "title": "BirdSpin Casino VIP Program 2025 – Levels, Rewards & How to Climb Fast",
+          "excerpt": "BirdSpin Casino processes crypto and e-wallet withdrawals in minutes. This guide covers every payment method, limits, and KYC requirements."
+        }
+      ]
+    }
+  ]
+},
+{
+  "footer": {
+    "logo": {
+      "imageKey": "logo",
+      "link": "/"
+    },
+    "navLinks": [
+      { "text": "Home", "link": "/", "isActive": true },
+      { "text": "Bonuses", "link": "/bonuses" },
+      { "text": "Licensing", "link": "/licensing" },
+      { "text": "Tips", "link": "/tips" },
+      { "text": "Glossary", "link": "/glossary" },
+      { "text": "Blog", "link": "/blog" },
+      { "text": "Terms", "link": "/terms" },
+      { "text": "Contact", "link": "mailto:hello@birdspincasino.com" }
+    ],
+    "noticeTitle": "18+ Notice",
+    "noticeText": "birdspincasino.com does not promote or encourage gambling. All content targets adults aged 18 and over and highlights responsible play tools. birdspincasino.com includes partner links and we may earn commissions when visitors click and complete qualifying actions.",
+    "copyright": "© 2026 birdspincasino.com. All rights reserved"
+  }
+}
+  ]
+}

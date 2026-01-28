@@ -1,0 +1,35 @@
+ 
+.p_big {
+    font: normal var(--font-size-sm) / var(--line-height-sm) Font-Base, sans-serif;
+}
+
+.container {
+   text-align: left;
+}
+
+
+
+.container .col{
+display: block;
+column-count: 2;
+  column-gap: 40px;
+ } 
+
+ .col h2, .col p {
+    break-inside: avoid; 
+  display: block;
+ }
+
+ .col p {
+    margin-bottom: 40px;
+ }
+ 
+.container col > h2  {
+    margin-top: var(--spacing-lg);
+}
+
+@media (max-width:700px) {
+   .container .col {
+     column-count: 1;
+}
+}

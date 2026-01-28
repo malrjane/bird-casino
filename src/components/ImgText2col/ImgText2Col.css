@@ -1,3 +1,7 @@
 .div_pic > div {
     width: 48%;
 }
+
+.div_pic.flex.row-reverse {
+    flex-direction: row-reverse;
+}

@@ -1,0 +1,170 @@
+{
+  "heroImage": {
+    "src": "/images/bg.avif",
+    "alt": "BirdSpin cosmic background"
+  },
+  "cta1": {
+    "src": "/images/pic_1.avif",
+    "alt": "First Deposit Bonus"
+  },
+  "bonus1": {
+    "src": "/images/home/4.avif",
+    "alt": "BirdSpin hero celebrating the first deposit bonus CTA"
+  },
+  "bonus2": {
+    "src": "/images/home/5.avif",
+    "alt": "BirdSpin high roller bundle glowing with neon chips"
+  },
+  "bonus3": {
+    "src": "/images/home/6.avif",
+    "alt": "BirdSpin cashback calendar showing daily reward path"
+  },
+  "i1": {
+    "src": "/images/games/1.avif",
+    "alt": "Starburst slot"
+  },
+  "i2": {
+    "src": "/images/games/2.avif",
+    "alt": "Sweet Bonanza slot"
+  },
+  "i3": {
+    "src": "/images/games/3.avif",
+    "alt": "Zeus multipliers"
+  },
+  "i4": {
+    "src": "/images/games/4.avif",
+    "alt": "Starlight Princess slot"
+  },
+  "i5": {
+    "src": "/images/games/5.avif",
+    "alt": "Sugar Rush slot"
+  },
+  "i6": {
+    "src": "/images/games/6.avif",
+    "alt": "Madame Destiny slot"
+  },
+  "i7": {
+    "src": "/images/games/7.avif",
+    "alt": "Big Bass Splash slot"
+  },
+  "i8": {
+    "src": "/images/games/8.avif",
+    "alt": "Razor Shark slot"
+  },
+  "i9": {
+    "src": "/images/games/9.avif",
+    "alt": "Money Train 3 slot"
+  },
+  "right-img": {
+    "src": "/images/home/7.avif",
+    "alt": "Welcome bonus artwork with superhero pilot and chips"
+  },
+  "left-img": {
+    "src": "/images/home/8.avif",
+    "alt": "Welcome bonus artwork with superhero pilot and chips"
+  },
+  "provider1": {
+    "src": "/images/game_providers/amatic_industries.avif",
+    "alt": "Amatic Industries Casino Games"
+  },
+  "provider2": {
+    "src": "/images/game_providers/betsoft.avif",
+    "alt": "Betsoft 3D Slots and Casino Games"
+  },
+  "provider3": {
+    "src": "/images/game_providers/blueprint_gaming.avif",
+    "alt": "Blueprint Gaming Slot Machines"
+  },
+  "provider4": {
+    "src": "/images/game_providers/elk_studios.avif",
+    "alt": "ELK Studios Mobile Casino Games"
+  },
+  "provider5": {
+    "src": "/images/game_providers/endorphina.avif",
+    "alt": "Endorphina Online Slots"
+  },
+  "provider6": {
+    "src": "/images/game_providers/evolution.avif",
+    "alt": "Evolution Live Casino Games"
+  },
+  "provider7": {
+    "src": "/images/game_providers/gamomat.avif",
+    "alt": "Gamomat Video Slots"
+  },
+  "provider8": {
+    "src": "/images/game_providers/hacksaw_gaming.avif",
+    "alt": "Hacksaw Gaming Scratch Cards"
+  },
+  "provider9": {
+    "src": "/images/game_providers/isoftbet.avif",
+    "alt": "iSoftBet Online Slots"
+  },
+  "provider10": {
+    "src": "/images/game_providers/microgaming.avif",
+    "alt": "Microgaming Progressive Jackpots"
+  },
+  "provider11": {
+    "src": "/images/game_providers/igt.avif",
+    "alt": "Game Provider IGT Logo"
+  },
+  "provider12": {
+    "src": "/images/game_providers/netent.avif",
+    "alt": "NetEnt Popular Casino Games"
+  },
+  "provider13": {
+    "src": "/images/game_providers/novomatic.avif",
+    "alt": "Novomatic Slot Games"
+  },
+  "provider14": {
+    "src": "/images/game_providers/play_and_go.avif",
+    "alt": "Play'n GO Mobile Slots"
+  },
+  "provider15": {
+    "src": "/images/game_providers/playtech.avif",
+    "alt": "Playtech Casino Software"
+  },
+  "provider16": {
+    "src": "/images/game_providers/push_gaming.avif",
+    "alt": "Push Gaming HTML5 Games"
+  },
+  "provider17": {
+    "src": "/images/game_providers/quickspin.avif",
+    "alt": "Quickspin Video Slots"
+  },
+  "provider18": {
+    "src": "/images/game_providers/realtime_gaming.avif",
+    "alt": "Realtime Gaming RTG Slots"
+  },
+  "provider19": {
+    "src": "/images/game_providers/red_tiger.avif",
+    "alt": "Red Tiger Gaming Daily Drops"
+  },
+  "provider20": {
+    "src": "/images/game_providers/relax_gaming.avif",
+    "alt": "Relax Gaming Casino Content"
+  },
+  "provider21": {
+    "src": "/images/game_providers/thunderkick.avif",
+    "alt": "Thunderkick Innovative Slots"
+  },
+  "provider22": {
+    "src": "/images/game_providers/yggdrasil.avif",
+    "alt": "Yggdrasil Gaming Premium Slots"
+  },
+  "blog_img_6": {
+    "src": "/images/blog/big/6.avif",
+    "alt": "Seasonal Promotions and Tournaments at BirdSpin Casino 2025 – December Update"
+  },
+  "blog_img_5": {
+    "src": "/images/blog/big/5.avif",
+    "alt": "Exploring Live Dealer Games at BirdSpin Casino 2025 – Full Overview"
+  },
+  "blog_img_4": {
+    "src": "/images/blog/big/4.avif",
+    "alt": "A Guide to Fast Withdrawals and Payments at BirdSpin Casino 2025"
+  },
+  "blog_img_3": {
+    "src": "/images/blog/big/3.avif",
+    "alt": "BirdSpin Casino VIP Program 2025 – Levels, Rewards & How to Climb Fast"
+  }
+}

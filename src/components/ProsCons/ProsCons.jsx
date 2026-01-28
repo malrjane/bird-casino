@@ -1,52 +1,37 @@
-import './ProsCons.css'
+import './ProsCons.css';
+import TextSection from '../TextSection/TextSection.jsx';
 
-function  ProsCons () {
+function  ProsCons ({elements, id}) {
+  const textElements = elements.filter(el => el.type !== 'component');
+  const gridComponent = elements.find(el => el.source === 'pros-cons-grid');
+  const { pros, cons } = gridComponent?.data || {};
    return (
        <section
-            id="sectionProps"
+            id={id}
             className="anchorSection sectionProps section_pros"
           >
             <div className="container">
-              <h2>BirdSpin Pros and Cons Balance</h2>
+<TextSection elements={textElements} isSimple={true} />
+
               <div className="pros_body flex">
                 <div className="div_pros">
-                  <h3>What Makes BirdSpin Shine Today</h3>
+                  <h3>{pros?.title}</h3>
                   <ul>
-                    <li>
-                      Massive 400 percent welcome staircase with stacked free
-                      spins
-                    </li>
-                    <li>
-                      Over 15000 certified slots plus Evolution live casino
-                      tables
-                    </li>
-                    <li>
-                      70 plus payment methods including crypto and fast
-                      e-wallets
-                    </li>
-                    <li>
-                      Daily tournaments loyalty missions and 7 percent VIP
-                      cashback
-                    </li>
+                   {pros?.items.map((item, i)=> {
+                   return(
+                     <li key={i}>{item}</li>
+                   )
+                   })}
                   </ul>
                 </div>
                 <div className="div_cons">
-                  <h3>Where BirdSpin Can Improve 🔧</h3>
-                  <ul>
-                    <li>
-                      Daily withdrawal limit 500 EUR for standard accounts
-                    </li>
-                    <li>
-                      Some promotions restricted for certain countries and
-                      payment methods
-                    </li>
-                    <li>
-                      Live chat currently available only in English language
-                    </li>
-                    <li>
-                      High wagering contributions on table games slow bonus
-                      clearing
-                    </li>
+                  <h3>{cons?.title}</h3>
+                   <ul>
+                   {cons?.items.map((item, i)=> {
+                  return(
+                      <li key={i}>{item}</li>
+                  )
+                   })}
                   </ul>
                 </div>
               </div>

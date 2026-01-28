@@ -1,10 +1,11 @@
 .ul_details {
   flex-wrap: wrap;
   margin-top: var(--spacing-lg);
+  gap: 10px;
 }
 
 .ul_details li {
-  width: 33%;
+  width: calc(33% - 5px);
   font:
     bold var(--font-size-md)/var(--line-height-sm) Font-Base,
     Arial,

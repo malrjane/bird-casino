@@ -1,52 +1,44 @@
-import './BonusOverview.css'
+import './BonusOverview.css';
 
-function BonusOverview () {
+
+ 
+
+function BonusOverview ({elements, id}) {
+   
+  const titleOverview = elements.find(el => el.type === 'h2').text;
+ const infoElements = elements.filter(el => el.type !== 'h2');
+const rows = [];
+for (let i = 0; i < elements.length; i++) {
+  if (elements[i].type === 'strong') {
+    rows.push({
+      label: elements[i].text,
+      value: elements[i + 1]?.text || ''
+    });
+  }
+}
     return (
          <section
-            id="sectionSummary"
+            id={id}
             className="anchorSection sectionSummary section_details"
           >
             <div className="container">
-              <h2>BirdSpin Casino Snapshot Overview Today</h2>
+              <h2>{titleOverview}</h2>
+              {infoElements && 
               <ul className="ul_details flex">
-                <li>
-                  <strong>Casino Name:</strong><span>Birdspin Casino</span>
+                {rows.map((row, index)=>   (
+
+                     <li key={index}>
+                  <strong>{row.label}</strong><span>{row.value}</span>
                 </li>
-                <li><strong>Website:</strong><span>birdspin.com</span></li>
-                <li><strong>Launched:</strong><span>2025</span></li>
-                <li>
-                  <strong>Type:</strong
-                  ><span
-                    >Real money online casino focused on slots and live
-                    games</span
-                  >
-                </li>
-                <li>
-                  <strong>VIP Bonus:</strong
-                  ><span>7% daily VIP cashback with bonus coins ladder</span>
-                </li>
-                <li><strong>Bonus Crab:</strong><span>Yes</span></li>
-                <li>
-                  <strong>Welcome Bonus:</strong
-                  ><span
-                    >400% welcome package up to 2000 EUR plus 230 free
-                    spins</span
-                  >
-                </li>
-                <li>
-                  <strong>First Deposit Bonus:</strong
-                  ><span
-                    >100% up to 555 EUR with 200 free spins and 3 coins</span
-                  >
-                </li>
-                <li>
-                  <strong>Free Spins:</strong
-                  ><span
-                    >Daily 1350 free spins drops and weekly 3500 free spins
-                    race</span
-                  >
-                </li>
+                  )
+                )}
+                
+             
+               
               </ul>
+
+              }
+               
             </div>
           </section>
    )

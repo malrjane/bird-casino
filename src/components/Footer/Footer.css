@@ -7,7 +7,7 @@
 }
 
 .footer_top {
-    padding: var(--spacing-lg) 0 var(--spacing-2xl) var(--aside-width);
+    padding: var(--spacing-lg) 0 var(--spacing-2xl) 225px;
     align-items: flex-start;
 }
 

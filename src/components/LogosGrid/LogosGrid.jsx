@@ -1,38 +1,46 @@
 import './LogosGrid.css';
-import { providersLogos } from '../../data/providersLogos';
+ import { getImage } from '../../utils/utils';
+ import React from 'react';
+import TextSection from '../TextSection/TextSection.jsx';
 
-function LogosGrid () {
+
+function LogosGrid ({elements, id}) {
+  const textElements = elements?.filter(el => el.type !== 'component');
+
+  const providersComponent = elements?.find(el => el.source === 'providers-logos');
+  const providersData = providersComponent?.data || [];
+ 
+
+
    return (
  <section
-            id="gameProviders"
+            id={id}
             className="anchorSection gameProviders section_text"
           >
             <div className="container">
               <div className="div_pic flex">
                 <div>
-                  <h2>BirdSpin Software Providers Lineup Showcase</h2>
-                  <p>
-                    Industry powerhouses like Pragmatic Play, NetEnt,
-                    Microgaming, Evolution, Play n GO, and Bgaming headline the
-                    BirdSpin Casino catalogue, joined by innovative studios such
-                    as Spinomenal, NoLimit City, and Hacksaw Gaming. Filters let
-                    you browse by provider, volatility, or feature, while Drops
-                    and Wins badges highlight boosted prize pools. Every partner
-                    holds independent certifications for fairness
-                  </p>
+                   <TextSection elements={textElements} isSimple={true} />
                 </div>
                 <div className="pic_block">
                   <div className="game_providers_grid">
-                    {providersLogos.map((logo)=> (
-                     
+
+ { 
+  providersData.map((logo)=> {   
+    const imageData = getImage(logo.src);             
+   return(       
                         <img
-                      src={logo.src}
-                      alt={logo.alt}
+                      src={imageData?.src}
+                      alt={imageData?.alt || "Casino Provider"}
                       loading="lazy"
                       decoding="async"
-                      key={logo.id} />  
+                      key={logo.id} />  )
                      
-                    ))}
+})
+                
+          }
+
+                     
                   </div>
                 </div>
               </div>

@@ -1,148 +1,76 @@
 import './SlideSection.css';
-import { games } from  '../../data/games.js'
 import React, { useRef, useCallback } from 'react';
 import { useSlider } from '../../hooks/useSlider.js';
- 
-   const Slide = React.memo(({ game }) => (
-  <div className="simple-slider-slide">
-    <div className="slider_item">
- <a className="link_pic"
-                          href="/start"
-                          aria-label={`Play ${game.name}`}
-                          >
-                            <img
-                            src={game.image}
-                            alt={game.alt}
-                            loading="lazy"
-                            decoding="async" />
-                            </a>
-                            <a className="btn btn_2"
-                          href="/start"
-                          aria-label={`Start Playing ${game.name}`}
-                          >
-                            <span>Play</span>
-                            </a>
+import TextSection from '../TextSection/TextSection.jsx';
+import Button from '../Button/Button.jsx';
+import { getImage } from '../../utils/utils';
+
+const Slide = React.memo(({ game }) => {
+const imageData = getImage(game.image);
+
+return (
+    <div className="simple-slider-slide">
+      <div className="slider_item">
+        <a className="link_pic" href="/start">
+          <img
+            src={imageData?.src}
+            alt={imageData?.alt || game.name}
+            loading="lazy"
+          />
+        </a>
+        <Button btnText='Play' />
+      </div>
     </div>
-  </div>
-));
+  );
+});
 
-
-function SlideSection() {
+function SlideSection({ elements, id }) {
   const sliderRef = useRef(null);
+   const sliderComponent = elements?.find(el => el.type === 'component' && el.source === 'slot-slider');
   
+   const sliderData = sliderComponent?.data || [];
    const {
     currentIndex,
-    slidesToShow,
-    maxIndex,
     translateX,
     progress,
     goToSlide,
     nextSlide,
     prevSlide,
-    isAutoPlaying,
-    setIsAutoPlaying,
-    pauseOnHover,
-    showProgress = true,   
-    showDots = true        
-  } = useSlider(games, {
+    maxIndex
+  } = useSlider(sliderData, {
     autoplay: true,
-    slidesToScroll: 1,
-    showProgress: true,
-    showDots: true
+    slidesToScroll: 1
   });
 
-   const handleMouseEnter = useCallback(() => {
-    if (pauseOnHover && isAutoPlaying) {
-      setIsAutoPlaying(false);
-    }
-  }, [pauseOnHover, isAutoPlaying, setIsAutoPlaying]);
+  return (
+    <section id={id} className="anchorSection aboutProject section_top">
+      <div className="container">
+         <TextSection elements={elements?.filter(el => el.type !== 'component')} isSimple={true} />
 
-  const handleMouseLeave = useCallback(() => {
-    if (pauseOnHover && !isAutoPlaying) {
-      setIsAutoPlaying(true);
-    }
-  }, [pauseOnHover, isAutoPlaying, setIsAutoPlaying]);
-   return (
-       <section
-            id="aboutProject"
-            className="anchorSection aboutProject section_top"
-          >
-            <div className="container">
-              <div className="top_title">
-                <h1>BirdSpin Casino Player Reviews Hub</h1>
-                <p>
-                  Players at BirdSpin Casino share upbeat stories about
-                  unlocking the 100 percent welcome boost, spinning through
-                  15000 slots, and enjoying daily tournaments. This BirdSpin
-                  casino review lounge highlights verified opinions about fast
-                  payouts, friendly support, and the 7 percent VIP cashback.
-                  Discover how BirdSpin keeps the vibe heroic while staying fair
-                  and secure
-                </p>
-              </div>
-              <div className="simple-slider"
-              ref={sliderRef}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          tabIndex={0} >
-                <div className="simple-slider-wrapper">
-                  <div
-                    className="simple-slider-container"
-                    style={{transform: `translateX(${translateX}%)`}}
-                  >
-
-                     {games.map((game) => (
-                       
-                <Slide key={game.id} game={game} />
-
-                     ))}
-                   
-                  </div>
-                  <button
-                    className="simple-slider-nav simple-slider-prev"
-                    aria-label="Previous slide"
-                    onClick={prevSlide}
-                    style={{opacity: 1}}
-                  >
-                    ‹</button
-                  ><button
-                    className="simple-slider-nav simple-slider-next"
-                    aria-label="Next slide"
-                    onClick={nextSlide}
-                    style={{opacity: 1}}
-                  >
-                    ›
-                  </button>
-                   {showProgress && (
-              <div 
-                className="simple-slider-progress"
+         {sliderData.length > 0 && (
+          <div className="simple-slider" ref={sliderRef}>
+            <div className="simple-slider-wrapper">
+              <div
+                className="simple-slider-container"
                 style={{ 
-                  width: `${progress}%`,
-                  transition: progress > 0 ? 'width 0.05s linear' : 'none'
+                  display: 'flex', 
+                  transform: `translateX(${translateX}%)`,
+                  transition: 'transform 0.5s ease' 
                 }}
-              ></div>
-            )}
-                 
-
-                   {showDots && maxIndex > 0 && (
-              <div className="simple-slider-dots">
-                {Array.from({ length: maxIndex + 1 }).map((_, index) => (
-                  <button
-                    key={index}
-                    className={`simple-slider-dot ${index === currentIndex ? 'active' : ''}`}
-                    data-slide={index}
-                    aria-label={`Go to slide ${index + 1}`}
-                    onClick={() => goToSlide(index)}
-                  ></button>
+              >
+                {sliderData.map((game) => (
+                  <Slide key={game.id} game={game} />
                 ))}
               </div>
-            )}
-                
-                </div>
-              </div>
+
+              <button className="simple-slider-nav simple-slider-prev" onClick={prevSlide}>‹</button>
+              <button className="simple-slider-nav simple-slider-next" onClick={nextSlide}>›</button>
             </div>
-          </section>
-   )
+          </div>
+        )}
+      </div>
+    </section>
+  );
 }
 
-export default  SlideSection;
+export default SlideSection;

@@ -1,49 +1,48 @@
 import './Text3Col.css';
-import { bonusCards } from '../../data/bonusCards';
+import Button from '../Button/Button';
+import TextSection from '../TextSection/TextSection.jsx';
+import { getImage } from '../../utils/utils';
 
-function Text3Col () {
-   return (
-        <section
-            id="depositMethods"
-            className="anchorSection depositMethods section_text"
-          >
-            <div className="container">
-              <h2>BirdSpin Deposit Options Ready Today</h2>
-              <p className="p_big">
-                BirdSpin Casino accepts instant deposits via Visa, Mastercard,
-                Skrill, Neteller, Paysafecard, Jeton, and major crypto wallets,
-                with most methods starting around 20 EUR while Daily Bonus Map
-                quests request 30 EUR. Funds hit your balance instantly so you
-                can trigger the welcome ladder or join tournaments right away.
-                The cashier shows transparent limits and never adds hidden fees
-              </p>
-              <div className="div_bonus flex">
-                {
-                  bonusCards.map((card)=> (
-                  
-                     <div key={card.id}>
-                  <a className="link_pic" href="/start"
-                    ><img
-                      src={card.image}
-                      alt={card.alt}
-                      loading="lazy"
-                      decoding="async"
-                    />
-                    <h6>
-                      {card.name}
-                      <span>
-                        {card.conditions}
-                        </span>
-                    </h6>
-                    </a>
-                    <a className="btn btn_2" href="/start"><span>Get Bonus</span></a>
-                </div>
 
-                 ))}
+function Text3Col({ elements, id }) {
+  const textElements = elements.filter(el => el.type !== 'component');
+  const bonusCardsData = elements.find(el => el.source === 'bonus-cards')?.data;
+
+  return (
+    <section id={id} className="anchorSection depositMethods section_text">
+      <div className="container">
+         <TextSection isSimple={true} elements={textElements} />
+
+         {bonusCardsData && (
+          <div className="div_bonus flex">
+             {bonusCardsData.map((card) => {
+const imageData = getImage(card.src);
+                        
+
+             return (
+               <div key={card.id}>
+                    
+                <a className="link_pic" href="/start">
+                  <img
+                    src={imageData?.src}
+                    alt={imageData?.alt || card.name}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <h6>
+                    {card.name}
+                    <span>{card.conditions}</span>
+                  </h6>
+                </a>
+                <Button btnText="Get Bonus" />
               </div>
-            </div>
-          </section>
-   )
+             )
+})}
+          </div>
+        )}
+      </div>
+    </section>
+  );
 }
 
 export default Text3Col;

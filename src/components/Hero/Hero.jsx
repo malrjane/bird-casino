@@ -1,56 +1,53 @@
-import { useEffect } from 'react';
-import './Hero.css';
+ import './Hero.css';
+import { getImage } from '../../utils/utils';
+import Button from '../Button/Button';
  
-function Hero () {
-   const heroImage = new URL('../../assets/images/bg_mobile.avif', import.meta.url).href;
-
-   const w_body = () => {
-    const w_w = window.innerWidth;
-    if (w_w > 1920) {
-      const w_b = ((w_w - 1920) / 2) + 1726;
-      const sectionImage = document.querySelector('.section_image');
-      if (sectionImage) {
-        sectionImage.style.width = w_b + 'px';
-      }
-    }
-    else {
-      // Сбрасываем ширину если экран меньше 1920px
-      const sectionImage = document.querySelector('.section_image');
-      if (sectionImage) {
-        sectionImage.style.width = '';
-      }}
-  }
+function Hero({ elements }) {
  
- useEffect(() => {
-    // Вызываем при монтировании
-    w_body();
-    
-    // Добавляем обработчик resize
-    window.addEventListener('resize', w_body);
-    
-    // Очистка при размонтировании
-    return () => {
-      window.removeEventListener('resize', w_body);
-    };
-  }, []);
+  const imageData = elements.find(el => el.type === 'image');
+  const { src } = imageData ? getImage(imageData.src) : { src: '' };
 
-   return (
-      <section className="section_image">
-            <img
-              fetchPriority="high"
-              src={heroImage}
-              alt="BirdSpin mobile logo on cosmic background"
-              className="bg_mobile"
+  
+
+  return (
+    <section className="section_image"  style={{ 
+        backgroundImage: src ? `linear-gradient(45deg, rgb(7 34 70 / 66%) 50%, transparent), url(${src})` : 'none',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}>
+       {/* {elements.map((el, index) => {
+        if (el.type === 'image') {
+          const { src, alt } = getImage(el.src);  
+          return (
+            <img 
+              fetchPriority="high" 
+              key={index} 
+              src={src} 
+              alt={alt} 
+              className="bg_mobile" 
             />
-            <div className="top_button">
-              <span className="span_bonus">First Deposit Bonus</span>
-              <h6>100% up to 555 EUR with 200 free spins and 3 coins</h6>
-              <a href="/start" className="btn btn_2"><span>Get Bonus</span></a>
-            </div>
-          </section>
-   )
+          );
+        }
+        return null;
+      })} */}
+
+      <div className="top_button">
+        {/* Отрисовка текстового контента и кнопок */}
+        {elements.map((el, index) => {
+          switch (el.type) {
+            case 'span':
+              return <span key={index} className="span_bonus">{el.text}</span>;
+            case 'h6':
+              return <h6 key={index}>{el.text}</h6>;
+            case 'button':
+              return <Button key={index} btnText={el.text} />;
+            default:
+              return null;
+          }
+        })}
+      </div>
+    </section>
+  );
 }
 
 export default Hero;
-
-   

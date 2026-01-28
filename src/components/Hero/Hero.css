@@ -3,18 +3,7 @@
     padding: 100px 0 90px;
     position: relative;
     overflow: hidden;
-    background-image:
-        linear-gradient(
-            to right,
-            color-mix(in srgb, var(--color-dark) 70%, transparent 0%) 0%,
-            color-mix(in srgb, var(--color-dark) 35%, transparent 0%) 50%,
-            transparent 100%
-        ),
-        url(../../assets/images/bg.avif);
-    background-repeat: no-repeat, no-repeat;
-    background-position: center center, center center;
-    background-size: 100% 100%, cover;
-    background-color: var(--color-bg-header-footer);
+  
     color: var(--color-white);
     width: 100%!important;
 
@@ -28,8 +17,7 @@
 }
 
 .section_pic {
-    background: url(../images/pic_1.avif) no-repeat center;
-    padding: 170px 0;
+     padding: 170px 0;
     /*margin: 0 var(--spacing-lg);*/
     background-size: cover;
     width: 100%;
@@ -68,10 +56,7 @@
     margin: 26px 0 26px var(--spacing-md);
 }
 
-/* Limit single-column text blocks to 2/3 width */
-.section_text .container > h2,
-.section_text .container > .p_big,
-.top_title p,
+ 
 .section_faq > .container > p,
 .section_faq .faq_open,
 .footer_top > h4,
@@ -89,9 +74,11 @@
 @media (max-width: 767px) {
   
     
-   
+   a.btn_2{font-size: 16px;}
 
     .section_image {
         background: none;
         padding: 0;
-    }}
+    }
+.section_image .top_button {padding: 15px;}
+}

@@ -1,146 +1,70 @@
-import { useState, useRef, useEffect } from 'react';
+ 
+
+import { useState, useRef, useEffect } from "react";
+import TextSection from '../TextSection/TextSection.jsx';
 import './FaqSection.css';
-import { faqs } from '../../data/faqs';
 
-function FaqSection() {
-  const [openFaqs, setOpenFaqs] = useState([]);
-  const faqRefs = useRef({});
 
-  const toggleFaq = (faqId) => {
-    setOpenFaqs(prevOpenFaqs => {
-      if (prevOpenFaqs.includes(faqId)) {
-        // Если FAQ уже открыт, закрываем его
-        const element = faqRefs.current[faqId];
-        if (element) {
-          slideUp(element, 300);
-        }
-        return prevOpenFaqs.filter(id => id !== faqId);
-      } else {
-        // Если FAQ закрыт, открываем его
-        const element = faqRefs.current[faqId];
-        if (element) {
-          slideDown(element, 300);
-        }
-        return [...prevOpenFaqs, faqId];
-      }
-    });
+
+
+export default function FAQSection({ elements, id }) {
+
+const textElements = elements.filter(el => el.type !== 'component');
+  const faqData = elements.find(el => el.source === 'faq')?.data;
+
+  const [openIndex, setOpenIndex] = useState(null);
+  const answerRefs = useRef([]);
+
+  if (!faqData) return null;
+
+  const toggleFAQ = (idx) => {
+    setOpenIndex(openIndex === idx ? null : idx);
   };
-
-  const isFaqOpen = (faqId) => {
-    return openFaqs.includes(faqId);
-  };
-
-  function slideUp(element, duration = 300) {
-    // Сохраняем текущую высоту
-    const height = element.scrollHeight;
-    
-    element.style.height = height + 'px';
-    element.style.transitionProperty = 'height, margin, padding';
-    element.style.transitionDuration = duration + 'ms';
-    element.style.overflow = 'hidden';
-    
-    // Force repaint
-    element.offsetHeight;
-    
-    element.style.height = '0';
-    element.style.paddingTop = '0';
-    element.style.paddingBottom = '0';
-    element.style.marginTop = '0';
-    element.style.marginBottom = '0';
-    
-    window.setTimeout(() => {
-      element.style.display = 'none';
-      element.style.removeProperty('height');
-      element.style.removeProperty('overflow');
-      element.style.removeProperty('transition-duration');
-      element.style.removeProperty('transition-property');
-      element.style.removeProperty('padding-top');
-      element.style.removeProperty('padding-bottom');
-      element.style.removeProperty('margin-top');
-      element.style.removeProperty('margin-bottom');
-    }, duration);
-  }
-
-  function slideDown(element, duration = 300) {
-    element.style.removeProperty('display');
-    
-    // Убедимся, что элемент видим для получения правильной высоты
-    element.style.display = 'block';
-    element.style.overflow = 'hidden';
-    element.style.height = '0';
-    
-    const height = element.scrollHeight;
-    
-    element.style.transitionProperty = 'height, margin, padding';
-    element.style.transitionDuration = duration + 'ms';
-    element.style.height = height + 'px';
-    
-    window.setTimeout(() => {
-      element.style.removeProperty('height');
-      element.style.removeProperty('overflow');
-      element.style.removeProperty('transition-duration');
-      element.style.removeProperty('transition-property');
-    }, duration);
-  }
-
-  // Инициализация при монтировании
-  useEffect(() => {
-    // Устанавливаем начальные стили для всех FAQ
-    faqs.forEach(faq => {
-      const element = faqRefs.current[faq.id];
-      if (element && !openFaqs.includes(faq.id)) {
-        element.style.display = 'none';
-        element.style.height = '0';
-        element.style.overflow = 'hidden';
-      }
-    });
-  }, []);
 
   return (
-    <section
-      id="sectionFaq"
-      className="anchorSection sectionFaq section_faq"
-    >
-      <div className="container">
-        <h2>BirdSpin FAQ Quick Answers Hub</h2>
-        <p>
-          The BirdSpin FAQ addresses the essentials: how to claim the no
-          deposit gifts, where to find wagering requirements, supported
-          payment methods, withdrawal speeds, and mobile compatibility.
-          Each answer summarises the rules and links you to full terms
-          inside the account area. Start here before chatting with support
-          to solve common questions faster
-        </p>
-        
-        <div className="faq_body">
-          {faqs.map((faq) => {
-            const isOpen = isFaqOpen(faq.id);
-            
+    
+    <section className="aboutSection" id={id}>
+      <div className="aboutBlock container">
+        <TextSection isSimple={true} elements={textElements} />
+{faqData && (
+        <div className="faqBlock__list">
+           {faqData.map((item, idx) => {
+            const isOpen = openIndex === idx;
+            const contentEl = answerRefs.current[idx];
+            const contentHeight = contentEl?.scrollHeight || 0;
+
             return (
               <div
-                className={`faq_item ${isOpen ? 'active' : ''}`}
-                key={faq.id}
+                key={item.id || idx}
+                className={`faqBlock__listItem ${
+                  isOpen ? "faqBlock__listItem-active" : ""
+                }`}
               >
-                <h3 itemProp="name" onClick={() => toggleFaq(faq.id)}>
-                  {faq.q}
-                </h3>
                 <div
-                  className="faq_open"
-                  ref={(el) => {
-                    faqRefs.current[faq.id] = el;
+                  className={`faqBlock__listItemTitle ${
+                    isOpen ? "faqBlock__listItemActive" : ""
+                  }`}
+                  onClick={() => toggleFAQ(idx)}
+                >
+                   <h4 data-heading-tag="H4">{item.question}</h4>
+                </div>
+
+                <div
+                  ref={(el) => (answerRefs.current[idx] = el)}
+                  className="faqBlock__listItemTitleDesc"
+                  style={{
+maxHeight: isOpen ? `${answerRefs.current[idx]?.scrollHeight}px` : "0px",
+overflow: "hidden",
+transition: "max-height 0.4s ease",
                   }}
                 >
-                  <div itemProp="text">
-                    {faq.a}
-                  </div>
+                  <div className="faq-answer">{item.answer}</div>
                 </div>
               </div>
             );
           })}
-        </div>
+        </div>)}
       </div>
     </section>
   );
 }
-
-export default FaqSection;

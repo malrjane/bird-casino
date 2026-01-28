@@ -135,3 +135,6 @@
     width: 300px;
     margin: 30px auto 0;
 }
+
+.blog_card a{width: fit-content;
+font-size: 16px;}

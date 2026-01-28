@@ -1,52 +1,76 @@
+ 
 
-.section_faq p {
-    margin-bottom: var(--spacing-md);
+:root {
+  --faq-color: #fff;
+  --faq-border: 1px solid #0edbf6;
+  --faq-color-active: #fbca41;
 }
 
-.faq_item {
-    background: color-mix(in srgb, var(--color-accent) 100%, transparent);
-    color: var(--color-button-text);
-    margin-bottom: var(--spacing-xs);
-    padding: var(--spacing-sm) var(--spacing-md);
-    border: 1px solid color-mix(in srgb, var(--color-accent-2) 25%, transparent);
+.faqBlock__list {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 30px;
+  gap: 15px;
 }
 
-.faq_item:hover {
-    background: color-mix(in srgb, var(--color-accent) 70%, transparent);
+.faqBlock__listItem {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  border: none;
+  cursor: pointer;
+  padding: 12px 16px;
+  border: var(--faq-border);
+  border-radius: 4px;
+  transition: all 0.3s linear;
 }
 
-.faq_item h3 {
-    font: bold var(--font-size-lg)/var(--line-height-xs) Font-Secondary, Arial, Helvetica, sans-serif;
-    letter-spacing: 0;
-    cursor: pointer;
-    position: relative;
-    margin: 0;
-    padding-right: var(--spacing-md);
-    color: var(--color-button-text);
+.faqBlock__listItem:hover {
+  border-color: var(--faq-color-active);
 }
 
-.faq_item h3::after {
-    position: absolute;
-    display: block;
-    content: '+';
-    top: 1px;
-    right: 0;
+.faqBlock__listItem-active {
+  border-color: var(--faq-color-active);
 }
 
-.faq_item h3.active::after {
-    content: '-';
+.faqBlock__listItemTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--faq-color);
+  font-weight: 500;
+  transition: .25s color;
 }
 
-.faq_open {
-    padding: 25px 0 var(--spacing-xs);
-    font: normal var(--font-size-md)/var(--line-height-xs) Font-Base, sans-serif;
-    letter-spacing: -0.02em;
-    display: none;
+.faqBlock__listItemTitle h4 {
+  font-size: 18px;
+  margin: 0;
+  font-weight: 400;
+  transition: all 0.3s linear;
 }
 
-@media (max-width:767px) {
-   
-    .faq_item h3 {
-        font: bold var(--font-size-md) / var(--line-height-xs) Font-Secondary, Arial, Helvetica, sans-serif;
-    }
+.faqBlock__listItemActive h4,.faqBlock__listItem:hover h4 {
+  color: var(--faq-color-active);
+}
+
+.faqBlock__listItemTitle span::after {
+  content: '\f107';
+  font-family: "FontAwesome", sans-serif;
+  font-size: 35px;
+}
+ 
+.faqBlock__listItemTitleDesc {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faqBlock__listItemTitleDesc p {
+  padding: 16px 28px;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.12;
+  margin: 0;
 }

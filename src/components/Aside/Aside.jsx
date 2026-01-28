@@ -123,21 +123,21 @@ const handleMenuClick = (e) => {
             }
         };
     }, [isMenuOpen]);
-
-    // Список разделов для меню
-    const menuItems = [
-        { id: 'aboutProject', text: 'Birdspin Casino', dataNr: '0' },
-        { id: 'bonuses', text: 'Bonuses', dataNr: '1' },
-        { id: 'loyaltyProgram', text: 'Loyalty Program', dataNr: '2' },
-        { id: 'paymentDetails', text: 'Payment Details', dataNr: '3' },
-        { id: 'depositMethods', text: 'Deposit Methods', dataNr: '5' },
-        { id: 'freeSpins', text: 'Free Spins', dataNr: '4' },
-        { id: 'gameProviders', text: 'Software Providers', dataNr: '8' },
-        { id: 'sectionFaq', text: 'FAQ', dataNr: '10' },
-        { id: 'sectionSummary', text: 'Summary', dataNr: '11' },
-        { id: 'sectionProps', text: 'Pros & Cons', dataNr: '12' },
-        { id: 'sectionBlog', text: 'Blog', dataNr: '13' }
-    ];
+const menuItems = [
+    { id: 'aboutProject', text: 'Birdspin Casino', dataNr: '0' },
+    { id: 'bonuses', text: 'Bonuses', dataNr: '1' },
+    { id: 'loyaltyProgram', text: 'Loyalty Program', dataNr: '2' },
+    { id: 'paymentDetails', text: 'Withdrawal Insights', dataNr: '3' },
+    { id: 'depositMethods', text: 'Deposit Options', dataNr: '4' },
+    { id: 'freeSpins', text: 'Free Spins Parade', dataNr: '5' },
+    { id: 'safetyEase', text: 'Safety & Fair Play', dataNr: '6' },
+    { id: 'popularGames', text: 'Popular Games', dataNr: '7' },
+    { id: 'gameProviders', text: 'Software Providers', dataNr: '8' },
+    { id: 'sectionNoname', text: 'VIP Program', dataNr: '9' },
+    { id: 'sectionFaq', text: 'FAQ', dataNr: '10' },
+    { id: 'sectionSummary', text: 'Summary', dataNr: '11' },
+    { id: 'sectionBlog', text: 'Blog', dataNr: '12' }
+];
    return (
       <div className="div_aside navbar-wrapper">
           <div ref={menuRef}  className={`aside_fixed ${isMenuOpen  ? 'show-aside' : ''}`}>
