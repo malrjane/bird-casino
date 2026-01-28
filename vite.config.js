@@ -5,15 +5,13 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   assetsInclude: ['**/*.avif', '**/*.webp'],
-   base: '/',
+   base: './',
   
-  // Добавьте явную обработку avif
-  build: {
-    assetsInlineLimit: 4096, // Файлы меньше 4kb инлайнятся
+   build: {
+    assetsInlineLimit: 4096,  
   },
   
-  // Явно указываем обработчики
-  optimizeDeps: {
+   optimizeDeps: {
     include: ['**/*.avif']
   }
 });
