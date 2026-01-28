@@ -1,11 +1,17 @@
- import imagesData from '../json/images.json';
+import imagesData from '../json/images.json';
 
-/**
-  * @param {string} key  
- * @returns {object}  
- */
 export const getImage = (key) => {
   const image = imagesData[key];
- 
-  return image;
+  if (!image) return { src: '', alt: '' };
+
+   const isGitHubPages = window.location.hostname.includes('github.io');
+  
+   const processedSrc = (isGitHubPages && image.src.startsWith('/')) 
+    ? `.${image.src}` 
+    : image.src;
+
+  return {
+    ...image,
+    src: processedSrc
+  };
 };
