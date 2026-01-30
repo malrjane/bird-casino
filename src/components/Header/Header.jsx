@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import './Header.css';
 import logoImage from '/images/logo.png'
-import Button from '../Button/Button';
-
+ 
 function Header() {
 
 const [isNavOpen, setIsNavOpen] = useState(false);
@@ -83,7 +82,7 @@ const toggleNav = () => {
                             <li><a href="/blog">Blog</a></li>
                         </ul>
                     </nav>
-                    {<Button btnText={'Register'}/>}
+                    <div>тут кнопка</div>
                 </div>
             </div>
         </header>
